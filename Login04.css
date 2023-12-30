@@ -1,0 +1,280 @@
+:root {
+    --background-color-main: black;
+    --main-container: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 160px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-container {
+    border: var(--main-container) 1px solid;
+    width: 500px;
+    height: 400px;
+    background-color: var(--main-container);
+    border-radius: 10px;
+}
+
+.text-signin {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    position: relative;
+    left: 75px;
+    top: 5px;
+    border: gainsboro 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.username-input, .password-input {
+    width: 360px;
+    height: 45px;
+    margin-left: 2rem;
+    margin-top: 20px;
+    border: gainsboro 1px solid;
+    border-radius: 10px;
+    padding-left: 2.3rem;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.username-input:hover, .password-input:hover {
+    box-shadow: black 4px 4px 4px 0;
+}
+
+.bx-low-vision {
+    position: relative;
+    right: 2.5rem;
+    top: 6px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.bx-low-vision:hover {
+    color: gray;
+}
+
+/* Check Box */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    margin-left: 60px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.container:hover {
+    color: #bab4b4;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 1px;
+    left: 15px;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #000000;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 4px;
+    bottom: 3px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Link Forgot Password */
+.link-forgot {
+    position: relative;
+    left: 285px;
+    bottom: 31px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.4s;
+    color: #2a2a2e;
+}
+
+.link-forgot:hover {
+    color: #bab4b4;
+}
+
+.button-btn {
+    width: 400px;
+    height: 45px;
+    border: #000000 1px solid;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #eee;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 50px;
+    transition: 0.4s;
+}
+
+.button-btn:hover {
+    background-color: #ccc;
+    border: #ccc 1px solid;
+    color: #000000;
+}
+
+.text-notaccount {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.link-signup {
+    font-size: 16px;
+    text-decoration: none;
+    color: #2a2a2e;
+}
+
+.link-signup:hover {
+    color: #ccc;
+}
+
+@media screen and (max-width: 375px){
+    .main-container {
+        width: 380px;
+    }
+
+    .text-signin {
+        font-size: 25px;
+    }
+
+    .icon {
+        left: 23px;
+    }
+
+    .username-input, .password-input {
+        width: 328px;
+        margin-left: -20px;
+        font-size: 13px;
+    }
+
+    .container {
+        right: 45px;
+    }
+
+    .link-forgot {
+        left: 14rem;
+    }
+
+    .button-btn {
+        margin-left: 2rem;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .main-container {
+        width: 380px;
+    }
+
+    .text-signin {
+        font-size: 25px;
+    }
+
+    .icon {
+        left: 20px;
+    }
+
+    .username-input, .password-input {
+        width: 345px;
+        margin-left: -20px;
+    }
+
+    .bx-low-vision {
+        left: 20.5rem;
+        top: -2rem;
+    }
+
+    .container {
+        left: -3rem;
+    }
+
+    .link-forgot {
+        left: 14rem;
+    }
+
+    .button-btn {
+        margin-left: 2.5rem;
+        width: 300px;
+    }
+
+    .text-notaccount {
+        font-size: 14px;
+    }
+
+    .link-signup {
+        font-size: 15px;
+    }
+}

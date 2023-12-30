@@ -1,0 +1,38 @@
+<!-- เหลือระบบ Login Javascript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login04</title>
+    <link rel="stylesheet" href="/css/Login04.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="main-container">
+        <p class="text-signin">SIGN IN</p>
+
+        <form action="#" method="get" id="form-container">
+            <i class='bx bxs-user-rectangle icon'></i>
+            <input type="text" class="username-input" placeholder="Username : admin" id="username" required><br>
+
+            <i class='bx bxs-lock icon'></i>
+            <input type="password" class="password-input" placeholder="Password: p@ssw0rd@!admin" id="password" required>
+            <i class='bx bx-low-vision' id="showpassword" onclick="clickShowPassword()"></i><br>
+
+            <label class="container">Remember Me
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <a href="#" class="link-forgot">Forgot Password</a><br>
+
+            <button class="button-btn" type="button" id="button">SIGN IN</button>
+        </form>
+
+        <p class="text-notaccount">Don't have an account? <a href="#" class="link-signup">Register</a></p>
+    </div>
+
+    <script src="/js/Login04.js"></script>
+</body>
+</html>
